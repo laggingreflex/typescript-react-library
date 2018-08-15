@@ -18,6 +18,7 @@
         "testonly": "cross-env NODE_ENV=test NODE_PATH=src nyc mocha",
         "test": "npm run lint && npm run testonly",
         "test-watch": "npm run testonly -- --watch --watch-extensions ts,tsx",
+        "mochista": "NODE_PATH=src mochista --require ts-node/register --require ./test/globals.ts --timeout 2500 --testFile test/**/*.test.{ts,tsx} --extensions .ts .tsx",
         "type-check": "tsc -p ./tsconfig.json --noEmit"
     },
     "devDependencies": {
@@ -34,6 +35,7 @@
         "enzyme": "^2.2.0",
         "jsdom": "^8.1.0",
         "mocha": "^2.4.5",
+        "mochista": "laggingreflex/mochista",
         "nyc": "^10.3.2",
         "react": "^15.0.0",
         "react-dom": "^15.0.0",
