@@ -3,6 +3,7 @@
         "./src/**/*",
         "./test/**/*",
         "./typings/**/*",
+        "./typings/*",
         "./node_modules/@types/**/*"
     ],
     "compilerOptions": {
